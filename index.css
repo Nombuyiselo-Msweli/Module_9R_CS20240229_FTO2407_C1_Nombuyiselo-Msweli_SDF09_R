@@ -1,3 +1,23 @@
 h1 {
     color:goldenrod;
+    font-family: "Rye", serif;
+    font-size: 4em;
+    background: rgb(1, 37, 4);
+}
+
+body {
+    font-family: "Lora", serif;
+    background-image: URL("images/bg-1.jpg");
+    background-size: cover;
+    color: whitesmoke;
+    text-align: center;
+    font-weight: bold;
+}
+
+.message-el {
+    font-style: italic;
+}
+
+p {
+    font-size: 2em;
 }
