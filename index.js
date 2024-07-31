@@ -27,3 +27,7 @@ let cardsEl = document.getElementById("cards-el")
         
         messageEl.textContent = message
     }
+
+    function newCard(){
+        console.log("you drew a new card")
+    }
