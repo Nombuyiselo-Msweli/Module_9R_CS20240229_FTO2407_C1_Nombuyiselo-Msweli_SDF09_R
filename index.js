@@ -2,6 +2,7 @@
 //Setting conditional statement for sum of cards
 let firstCard = 9
 let secondCard = 5
+let cards = [firstCard, secondCard]
 let sum = firstCard + secondCard 
 let hasBlackJack = false
 let isAlive = true
@@ -16,7 +17,11 @@ let cardsEl = document.getElementById("cards-el")
     }
     function renderGame() {
 
-        cardsEl.textContent = "Cards:" + firstCard + "+" + secondCard
+        cardsEl.textContent = "Cards:" 
+        for (let i = 0; i < cards.length; i++) {
+            cardsEl.textContent += cards[i] + " "
+        }
+
         sumEl.textContent = "Sum:" + sum
 
         if (sum <= 20){
@@ -35,11 +40,12 @@ let cardsEl = document.getElementById("cards-el")
     }
 
     function newCard(){
-        console.log("you drew a new card")
 
         let card = 10
 
         sum += card
+        cards.push(card)
 
         renderGame()
+        console.log(cards)
     }
