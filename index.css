@@ -21,3 +21,13 @@ body {
 p {
     font-size: 2em;
 }
+
+button {
+    color: goldenrod;
+    background: rgb(1, 37, 4);
+    width: 14em; 
+    height: 4em;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+}
