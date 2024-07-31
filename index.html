@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="index.js"></script>
     <link rel="stylesheet" href="index.css" type="text/css">
 
     <!---Google font 1-->
@@ -20,10 +19,12 @@
     
 <body>
         <h1> BlackJack ♠️♥️♦️♣️</h1>
-        <p id="message-el"> <em>Want to play around?</em></p>
+        <p id="message-el"> Want to play around? </p>
         <p> Cards:</p>
-        <p> Sum:</p>
+        <p id="sum-el"> Sum:</p>
         <button onclick="startGame()"> START GAME </button>
+        <script src="index.js"></script>    
     </body>
 </html>
 
+<!--NOTE: Where you put the <script> tag is important, when I put it in the head section or before H1 I got an error message in the console saying the HTMl elemt was null, and that it couldn't be accessed before being initialized. Meaning the browser was running the sciript before accessing the element so it was accessing essentially an "empty element" -->
