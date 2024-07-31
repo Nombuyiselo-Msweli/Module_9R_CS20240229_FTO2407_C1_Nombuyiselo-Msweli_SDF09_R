@@ -1,8 +1,8 @@
 
 //Setting conditional statement for sum of cards
-let firstCard = 11
-let secondCard = 10
-let sum = firstCard + secondCard
+let firstCard = 9
+let secondCard = 5
+let sum = firstCard + secondCard 
 let hasBlackJack = false
 let isAlive = true
 let message = ""
@@ -12,17 +12,20 @@ let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
 
     function startGame() {
+
         cardsEl.textContent = "Cards:" + firstCard + "+" + secondCard
         sumEl.textContent = "Sum:" + sum
 
         if (sum <= 20){
-            message = "Do you want to draw a new card? 🙂"
-        } else if (sum === 21) {
+            message = "Do you want to draw a new card?🙂"
+        } 
+        else if (sum === 21) {
+            message = "Wohoo! You've got Blackjack!🥳"
             hasBlackJack = true 
-            message = "Wohoo! You've got Blackjack! 🥳"
-        } else {
+        } 
+        else {
+            message = "You're out of the game!😭"
             isAlive = false
-            "You're out of the game! 😭"
         }
         
         messageEl.textContent = message
@@ -30,4 +33,10 @@ let cardsEl = document.getElementById("cards-el")
 
     function newCard(){
         console.log("you drew a new card")
+
+        let card = 10
+
+        sum += card
+
+        startGame()
     }
