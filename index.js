@@ -17,7 +17,7 @@ if (sum <= 20){
     "You're out of the game! 😭"
 }
 
-//CASH OUT condition 
+//logging out messages 
 //console.log(hasBlackJack)
 //console.log(isAlive)
 console.log(message)
