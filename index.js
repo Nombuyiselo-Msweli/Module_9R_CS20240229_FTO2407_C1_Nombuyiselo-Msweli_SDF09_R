@@ -1,5 +1,9 @@
 
 //DECLARING VARIABLES
+let player = {                     //player object
+    name: "Nombi",
+    chips: 55
+}
 let cards = []
 let sum = 0
 let hasBlackJack = false
@@ -9,7 +13,9 @@ let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 //let sumEl = document.querySelector("#sum-el") - another way to do the same thing
 let cardsEl = document.getElementById("cards-el")
+let playerEl = document.getElementById("player-el")
 
+playerEl.textContent = player.name + ": $" + player.chips
 // BASE GAME FUNCTIONS
     function getRandomCard(){
         let randomNumber =  Math.floor( Math.random()*13 ) + 1
