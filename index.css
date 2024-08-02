@@ -5,12 +5,20 @@
     --clr-accent: goldenrod; 
 }
 
+/* HEADING STYLING AND ANIMATIONS */
 h1 {
     color:var(--clr-accent);
     font-family: "Rye", serif;
     font-size: 4em;
     background: var(--clr-dark);
 }
+
+h1:hover {
+    transform: skewX(-20deg); 
+    letter-spacing: 4px;
+}
+
+/* BODY STYLING */
 
 body {
     font-family: "Lora", serif;
@@ -32,8 +40,8 @@ p {
 /* BUTTON STYLING & ANIMATION */
 
 @keyframes grow {
-  0%{ width: 14em; height: 4em}
-  100% { width: 16em; height: 6em}
+   0%{ width: 14em; height: 4em}
+  100% { width: 15em; height: 5em}
 }
 
 
@@ -49,8 +57,10 @@ button {
 }
 
 button:hover {
-    animation-name: grow;
-    animation-duration: 1s;
     background: var(--clr-light);
     color:var(--clr-dark);
+    animation-name: grow;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;    /* keeps the animation in the state at keyframe 100%*/
+    
 }
